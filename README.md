@@ -56,15 +56,6 @@ cd server
 npm install
 ```
 
-Create a `.env` file in the server directory with the following variables:
-
-```env
-PORT=3005
-MONGODB_URI=mongodb://localhost:27017/task-manager
-JWT_SECRET=your_jwt_secret_key_here
-CORS_ORIGIN=http://localhost:5173
-```
-
 ### 3. Frontend Setup
 
 ```bash
@@ -106,36 +97,6 @@ The frontend application will start on `http://localhost:5173`
 - `PUT /api/task/update-task/:taskId` - Update task (requires authentication)
 - `DELETE /api/task/delete-task/:id` - Delete task (requires authentication)
 
-## Project Structure
-
-```
-Task-management-app/
-├── server/
-│   ├── src/
-│   │   ├── mrc/
-│   │   │   ├── auth/
-│   │   │   └── tasks/
-│   │   ├── middlewares/
-│   │   ├── utils/
-│   │   ├── index.js
-│   │   └── server.js
-│   ├── package.json
-│   └── .env
-├── client/
-│   └── task-manager-frontend/
-│       ├── src/
-│       │   ├── components/
-│       │   ├── context/
-│       │   ├── hooks/
-│       │   ├── pages/
-│       │   ├── services/
-│       │   ├── App.jsx
-│       │   └── main.jsx
-│       ├── package.json
-│       └── vite.config.js
-└── README.md
-```
-
 ## Usage
 
 1. **Sign Up**: Create a new account with your name, email, and password
@@ -166,42 +127,3 @@ Task-management-app/
 - **Modern**: Clean and professional design using Ant Design
 - **Interactive**: Loading states, success/error messages, and confirmations
 - **Accessible**: Proper form labels and keyboard navigation
-
-## Deployment
-
-### Backend Deployment (Render/Heroku)
-
-1. Create a new account on Render or Heroku
-2. Connect your GitHub repository
-3. Set environment variables:
-   - `MONGODB_URI`
-   - `JWT_SECRET`
-   - `CORS_ORIGIN` (your frontend URL)
-4. Deploy the application
-
-### Frontend Deployment (Vercel)
-
-1. Create a Vercel account
-2. Import your GitHub repository
-3. Set the root directory to `client/task-manager-frontend`
-4. Deploy the application
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License.
-
-## Support
-
-If you encounter any issues or have questions, please open an issue on GitHub.
-
-## Demo
-
-A live demo of the application can be found at: [Demo Link] (if deployed) 
